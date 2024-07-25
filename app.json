@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "pokemon-project",
-    "slug": "pokemon-project",
+    "slug": "pokemon-react-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,16 +12,24 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "pokemon-react-native-app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.k_mpheqeke.pokemonreactapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bb5d3d5c-db7e-4d97-bfe1-10c035042db1"
+      }
+    },
+    "owner": "k_mpheqeke"
   }
 }
