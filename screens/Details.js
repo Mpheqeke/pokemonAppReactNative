@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { View, Text, FlatList,  TouchableOpacity, StyleSheet, Image} from "react-native";
 import pokemonData from "../assets/pokemonDetails.json"
+import axios from "axios";
 
 const DetailsScreen = ({route}) =>{
     const styles = StyleSheet.create({
@@ -88,7 +89,8 @@ const DetailsScreen = ({route}) =>{
     useEffect(() => {
         const getPokemonDetails = async () => {
           try {
-            setPokemonDetails(pokemonData);
+            const pokemonDetail = await axios.get(`http://localhost:8080/dashboard/details/` + name);
+            setPokemonDetails(pokemonDetail.data);
             console.log(name);
           } catch (err) {
             setError(err.message);

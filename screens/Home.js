@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { View, Text, FlatList,  TouchableOpacity, StyleSheet, Image} from "react-native";
 import pokemonDataList from "../assets/pokemonList.json"
 import { TextInput } from "react-native-gesture-handler";
+import axios from "axios";
 
 const HomeScreen = ({navigation}) =>{
     const [pokemonList, setPokemonList] = useState([]);
@@ -12,7 +13,8 @@ const HomeScreen = ({navigation}) =>{
     useEffect(() => {
         const getPokemonList = async () => {
           try {
-            setPokemonList(pokemonDataList);
+            const pokemonRawList  = await axios.get(`http://localhost:8080/dashboard/landing`);
+            setPokemonList(pokemonRawList.data);
           } catch (err) {
             setError(err.message);
           }
