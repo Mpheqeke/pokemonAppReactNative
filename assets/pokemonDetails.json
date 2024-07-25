@@ -1,0 +1,36 @@
+{
+  "height": 7,
+  "weight": 69,
+  "baseExperience": 64,
+  "name": "bulbasaur",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+  "specie": "bulbasaur",
+  "move": "razor-wind",
+  "stats": [
+    {
+      "name": "hp",
+      "level": 45
+    },
+    {
+      "name": "attack",
+      "level": 49
+    },
+    {
+      "name": "defense",
+      "level": 49
+    },
+    {
+      "name": "special-attack",
+      "level": 65
+    },
+    {
+      "name": "special-defense",
+      "level": 65
+    },
+    {
+      "name": "speed",
+      "level": 45
+    }
+  ],
+  "id": 1
+}
