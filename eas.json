@@ -14,9 +14,16 @@
       "android": {
         "image": "latest"
       },
-      "ios": {
+      "production": {
+      "android": {
         "image": "latest"
+      },
+      "ios": {
+        "image": "latest",
+        "distribution": "internal",
+        "buildType": "release"  
       }
+    }
     }
   },
   "submit": {
