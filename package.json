@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
+  "start": "node node_modules/expo/bin/cli.js start",
+  "android": "node node_modules/expo/bin/cli.js start --android",
+  "ios": "node node_modules/expo/bin/cli.js start --ios",
+  "web": "node node_modules/expo/bin/cli.js start --web",
+  "build": "expo build"
+},
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
     "@react-navigation/bottom-tabs": "^6.6.1",
